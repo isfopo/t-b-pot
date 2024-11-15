@@ -2,9 +2,9 @@
   "last_sch_text_sim_command": "",
   "tabs": [
     {
-      "analysis": "TRAN",
+      "analysis": "AC",
       "commands": [
-        ".tran 1u 10m",
+        ".ac dec 10 20 20k",
         ".kicad adjustpaths",
         ".save all",
         ".probe alli",
@@ -21,14 +21,50 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(152, 78, 163)",
-          "signal": "I(I1)",
-          "trace_type": 258
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(Net-_C1-Pad1_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(Net-_C1-Pad1_) (gain)",
+          "trace_type": 521
         },
         {
           "color": "rgb(77, 175, 74)",
-          "signal": "I(V1)",
-          "trace_type": 258
+          "signal": "V(Net-_C1-Pad2_) (phase)",
+          "trace_type": 517
+        },
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(Net-_C1-Pad2_) (gain)",
+          "trace_type": 521
+        }
+      ]
+    },
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".tran 10u 100m",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 140,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(Net-_C1-Pad1_)",
+          "trace_type": 257
         }
       ]
     }
